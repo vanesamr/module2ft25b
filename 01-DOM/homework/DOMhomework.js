@@ -51,16 +51,24 @@ ToDo.prototype.completeToDo = function () {
 
 function buildToDo(todo, index) {
   // Tu código acá:
+  let checkBox = document.querySelector ('.completeCheckbox');
+  checkBox.id = index;
+  
   let toDoShell = document.createElement('div');
   toDoShell.className='toDoShell';
 
   let toDoText = document.createElement('span');
   toDoText.innerHTML= todo.description;
-  toDoText.id= index;
-    if(todo.complete) toDoText.className= 'completeText';
+  
+    if(todo.complete) {
+      toDoText.className = 'completeText'
+      checkBox.checked = true;
+    };
+  
   toDoShell.appendChild(toDoText);
-  toDoText.addEventListener("click", completeToDo)
-  return toDoShell
+  toDoShell.appendChild(checkBox);
+  checkBox.addEventListener("click", completeToDo);
+  return toDoShell;
 }
 
 // La función 'buildToDos' debe crear un array de objetos toDo y devolverlo
