@@ -1,4 +1,4 @@
-(function () {
+
 
   // var whiteboard = window.whiteboard;
   // var socket = window.io(window.location.origin);
@@ -30,4 +30,3 @@
     socket.emit('draw', start, end, color);
   });
 
-})();
