@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Card(img, max, min, name, onClose) {
+export default function Card({img, max, min, name, onClose}) {
   
   return ( 
     <div>
-      <button onCLick= {onCLose}>X</button>
+      <button onClick= {onClose}>X</button>
       <h4>{name}</h4>
       <p>{min}</p>
       <p>{max}</p>
