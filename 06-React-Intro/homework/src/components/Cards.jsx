@@ -10,7 +10,7 @@ export default function Cards({cities}) {
         max = {city.main.temp_max}
         min = {city.main.temp_min}
         name = {city.name}
-        onCLose = {()=> alert(city.name)}
+        onClose = {()=> alert(city.name)}
         img = {city.weather[0].icon}
       />
       )))
