@@ -1,0 +1,31 @@
+
+.SearchBar {
+    margin-bottom: 8px;
+}
+
+.SearchBar input {
+    border: 1px solid #ddd;
+    background-color: rgba(120,120,120,0.55);
+    color: #ddd;
+    margin-right: 10px;
+    border-radius: 8px;
+    width: 300px;
+    
+}
+
+.SearchBar input::placeholder {
+    color: #ddd;
+}
+
+.SearchBar button {
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: rgba(120,120,120,0.55);
+    outline: none;
+    transition: color 0.25s;
+}
+
+.SearchBar button:hover {
+    color: #ddd;
+}

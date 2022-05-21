@@ -1,36 +1,30 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
-import data, { Cairns } from './data.js';
+import data from './data.js';
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <Card
-          max={Cairns.main.temp_max}
-          min={Cairns.main.temp_min}
-          name={Cairns.name}
-          img={Cairns.weather[0].icon}
-          onClose={() => alert(Cairns.name)}
-        />
-      </div>
-      <hr />
-      <div>
-        <Cards
-          cities={data}
-        />
-      </div>
-      <hr />
-      <div>
-        <SearchBar
-          onSearch={(ciudad) => alert(ciudad)}
-        />
-      </div>
-    </div>
-  );
+    <>
+      <div className= {styles.app}/>
+      <div className= {styles.background}/>
+      <div className= {styles.container}>
+        <SearchBar onSearch={(ciudad) => alert(ciudad)} />
+        <div className= {styles.citiesContainer}>
+          <Card
+            xl={true}
+            name= {data[0]?.name}
+            min= {data[0]?.main.temp_min}
+            max= {data[0]?.main.temp_max}
+            img= {data[0]?.weather[0].icon}
+          />
+          <Cards cities={data.slice(1)} />
+        </div> 
+      </div>   
+    </>   
+  )
 }
+ export default App;
 
-export default App;
