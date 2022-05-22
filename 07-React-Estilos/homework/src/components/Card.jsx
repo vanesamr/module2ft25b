@@ -5,7 +5,7 @@ export default function Card({img, max, min, name, onClose, className, xl}) {
   const cardClass = xl ? styles.cardXl : styles.cardMd;
   return (
     <div className= {`${styles.weatherCard} ${cardClass} ${className || ""}`}>
-        <button className={styles.button} onClick= {onClose}>x</button> 
+        <button className={styles.button} onClick= {onClose}>x</button>
         <span>{name}</span>
         <div className={styles.weatherInformation}>
           <img src= {`http://openweathermap.org/img/wn/${img}@2x.png`} alt= "Icono del clima"/>
