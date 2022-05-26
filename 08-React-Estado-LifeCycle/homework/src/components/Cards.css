@@ -1,5 +1,5 @@
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.weatherCards{
+  display:flex;
+  flex-direction: row;
+  margin-top: 8px;
 }
