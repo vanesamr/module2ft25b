@@ -1,5 +1,5 @@
 .app{
-  background-image: url("./assets/background.jpg");
+  background-image: url('../src/assets/background.jpg');
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@
   height: 80%;
   margin: 10vh 10vw;
   overflow: hidden;
-  background-image: url("./assets/background.jpg");
+  background-image: url('../src/assets/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1.5rem;

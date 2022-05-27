@@ -13,7 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "webpack": "4.44.2"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,8 +35,7 @@
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
-    "babel-loader": "^8.2.5",
-    "webpack": "^4.44.2",
+    "webpack": "4.44.2",
     "webpack-cli": "^4.9.2"
   }
 }
