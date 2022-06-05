@@ -1,20 +1,81 @@
-.card {
-  margin: 20px;
-  width: 18rem;
+.weatherCard{
+  background-color: rgba(120,120,120,0.55);
+  margin: 0px 15px 0px 15px;
+  align-items: center;
+  border-radius: 16px;
+  padding: 10px;
+  color: #dddddd;
+  border: solid 1px #ddd;
+  display:flex;
+  flex-direction: column;
+  position: relative;
 }
 
-.card-title {
-  margin-bottom: 15px;
+.weatherCard img{
+  width: 80px;
+  height: 80px;
 }
 
-#closeIcon {
+.cardXl {
+  width: 433px;
+  height: 200px;
+  font-size: 24px; 
+}
+
+.cardMd {
+  width: 125px;
+}
+
+.cardXl img {
+  width: 60px;
+  height: 60px;
+  object-fit: none;
+  transform: scale(1.5);
+}
+
+.weatherInformation {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 8px;
-  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
 }
 
-.card-body {
-  margin-top: 0px !important;
-  padding-top: 0px !important;
+.cardXl .weatherInformation {
+  flex: 1;
+}
+
+
+.temp{
+  text-align: center;
+  display: flex;
+  font-size: 15px;
+}
+
+.min,
+.max{
+  display: flex;
+  flex-direction: column;
+}
+
+.min {
+  margin-right: 10px;
+}
+
+.button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 8px;
+  line-height: 8px;
+  color: #d4d4d4;
+  transition: color 0.25s;
+}
+
+.button:hover {
+  color: white;
+}
+
+.button:focus {
+  outline: none;
 }
