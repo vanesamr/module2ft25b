@@ -11,7 +11,7 @@ export default function SearchBar({onSearch}) {
     }}>
       <input
         type="text"
-        placeholder="Agregar ciudad..."
+        placeholder="Add city..."
         value= {city}
         onChange= {e => setCity(e.target.value)}
       />

@@ -1,8 +1,12 @@
 import React from 'react';
 import './Cards.css';
 import Card from './Card.jsx';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cards({cities, onClose}) {
+  
+  const navigate= useNavigate();
+
   if(cities && cities.length > 0){
     return (
       <div className="citiesContainer">
@@ -15,6 +19,7 @@ export default function Cards({cities, onClose}) {
           id={cities[0].id}
           key={cities[0].id}
           xl={true}
+          navigate= {() => navigate(`city/${cities[0].id}`)}
         />
         <div className='weatherCards'>
           {cities.slice(1, 4).map((c) =>

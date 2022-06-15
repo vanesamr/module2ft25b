@@ -1,7 +1,8 @@
-import React from 'react-router-dom';
+import React from 'react';
 import './City.css';
 
 export default function City ({city}){
+    
     return (
         <div className="cityContainer">
             {city && (

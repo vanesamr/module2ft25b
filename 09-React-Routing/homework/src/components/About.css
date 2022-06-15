@@ -1,0 +1,29 @@
+.aboutApp{
+    background-color: rgba(120,120,120,0.55);
+    margin: 0px 15px 0px 15px;
+    align-items: center;
+    border-radius: 16px;
+    padding: 10px;
+    color: #dddddd;
+    border: solid 1px #ddd;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    text-align: justify;
+    }
+    
+    #logoHenry { 
+      margin-right: 20px;
+      align-items: center;
+    }
+    
+    .aboutTitle{
+      color:#dddddd;
+      text-align: justify;
+    }
+    
+    .aboutMe{
+      color: #dddddd;
+      text-align: justify;
+    }
+    

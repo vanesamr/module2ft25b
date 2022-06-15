@@ -1,7 +1,7 @@
 import React, {useState}from 'react';
 import Home from '../components/Home.jsx';
 import About from '../components/About.jsx';
-import { Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import City from '../components/City.jsx';
 import Nav from '../components/Nav.jsx';
 import Cards from '../components/Cards.jsx';
@@ -47,20 +47,33 @@ function App() {
       }
     }
     return (
-      <div className='full-screen'>
-        <div className="app" />
-        <div className="background"/>
-        <div className="container">
-          <Route path='/' component={Home}/>  
-          <Route path='/' render={() => <Nav onSearch={onSearch} />}/>
-          <Route path='/about' component={About}/>
-          <div className="citiesContainer">
-            <Route exact path='/' render={() => <Cards cities={cities} onClose={onClose}/>}/>
-            <Route path='/ciudad/:ciudadId' render={({match}) => <City city={onFilter(match.params.ciudadId)}/>}/>
+        <div className='full-screen'>
+          <div className="app" />
+          <div className="background"/>
+          <div className="container">
+          <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/about' element={<About />} />
+        <Route path='/city/:ciudadId' element={<City />} />
+      </Routes> 
+
+            {/* <Routes>  
+              <Route path='/' render={() => <Nav onSearch={onSearch} />}/>
+              <Route path='/about' component={About}/>
+              <Route exact path='/' render={() => (
+                <div className="citiesContainer">
+                  <Cards cities={cities} onClose={onClose}/>
+                  </div>
+              )}/>
+              <Route path='/ciudad/:ciudadId' render={({match}) => (
+                <div className="citiesContainer">
+                  <City city={onFilter(match.params.ciudadId)}/>
+                </div>
+              )}/>
+            </Routes> */}
           </div>
         </div>
-      </div>
-    );  
+      );
   }
   
   export default App;
